@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africa Development Dashboard - Complete Section Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            color: #333;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header h2 {
+            color: #666;
+            font-weight: 400;
+            font-size: 1.4em;
+        }
+        
+        .header-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+        
+        .section {
+            background: #f8faff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 8px solid #667eea;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .section:hover {
+            transform: translateX(10px);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .section-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            background: white;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .section-title {
+            font-size: 2em;
+            color: #333;
+        }
+        
+        .section-subtitle {
+            color: #666;
+            margin-top: 5px;
+            font-size: 1.1em;
+        }
+        
+        .visual-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            border: 2px dashed #ccc;
+            overflow-x: auto;
+        }
+        
+        .visual-preview pre {
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .explanation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .explanation-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .explanation-card h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .explanation-card ul {
+            list-style-type: none;
+        }
+        
+        .explanation-card li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+        
+        .explanation-card li:before {
+            content: "→";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 1px solid #667eea30;
+        }
+        
+        .insight-box h5 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .metric-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+        }
+        
+        .color-demo {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        .table-of-contents {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .table-of-contents h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .toc-item {
+            padding: 12px 20px;
+            background: #f8faff;
+            border-radius: 12px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        
+        .toc-item:hover {
+            background: white;
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 3px solid #f0f0f0;
+            color: #666;
+        }
+        
+        .emoji-large {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .guide-container {
+                padding: 20px;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .section-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        <div class="header">
+            <h1>📊 Africa Development Intelligence Dashboard</h1>
+            <h2>Complete Section-by-Section Guide</h2>
+            <div class="header-badge">
+                Your Comprehensive Reference for Understanding Every Dashboard Component
+            </div>
+        </div>
+
+        <div class="table-of-contents">
+            <h3>📑 Quick Navigation</h3>
+            <div class="toc-grid">
+                <a href="#header" class="toc-item">1. Header Section</a>
+                <a href="#metrics" class="toc-item">2. Key Metrics Cards</a>
+                <a href="#policy" class="toc-item">3. Country Analysis & Policy Simulation</a>
+                <a href="#barchart" class="toc-item">4. Development Index by Country</a>
+                <a href="#bubble" class="toc-item">5. Development Drivers Matrix</a>
+                <a href="#importance" class="toc-item">6. Feature Importance (Explainable AI)</a>
+                <a href="#forecast" class="toc-item">7. Development Forecast 2025-2040</a>
+                <a href="#network" class="toc-item">8. Trade Network Analysis</a>
+                <a href="#policyimpact" class="toc-item">9. Policy Impact Analysis</a>
+                <a href="#datatable" class="toc-item">10. Country Development Data Table</a>
+                <a href="#controls" class="toc-item">11. Control Buttons</a>
+                <a href="#footer" class="toc-item">12. Footer</a>
+                <a href="#workflow" class="toc-item">13. Integrated Workflow</a>
+            </div>
+        </div>
+
+        <!-- Section 1: Header -->
+        <section id="header" class="section">
+            <div class="section-header">
+                <div class="section-icon">🏠</div>
+                <div>
+                    <div class="section-title">1. Header Section</div>
+                    <div class="section-subtitle">The dashboard's identity and capability overview</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  🌍 Africa Development Intelligence Dashboard                    │
+│  Real-time monitoring & predictive analytics for continental    │
+│  development                                                    │
+│  [✨ AI-Powered] [📊 Real-time Analytics] [🎯 Policy Simulator]  │
+│  [🔮 Forecast 2040]                                              │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📋 What It Shows</h4>
+                    <ul>
+                        <li><strong>Title:</strong> Identifies dashboard purpose</li>
+                        <li><strong>Subtitle:</strong> Brief description of capabilities</li>
+                        <li><strong>Enhancement Badges:</strong> Color-coded tags highlighting key features</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🎯 What Each Badge Means</h4>
+                    <ul>
+                        <li><span class="color-demo" style="background: #667eea;"></span> <strong>✨ AI-Powered:</strong> Machine learning models (94% accuracy)</li>
+                        <li><span class="color-demo" style="background: #28a745;"></span> <strong>📊 Real-time Analytics:</strong> Continuous data updates</li>
+                        <li><span class="color-demo" style="background: #ffc107;"></span> <strong>🎯 Policy Simulator:</strong> "What-if" scenario testing</li>
+                        <li><span class="color-demo" style="background: #dc3545;"></span> <strong>🔮 Forecast 2040:</strong> Long-term projections</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <h5>💡 Why It Matters</h5>
+                <p>Immediately communicates dashboard capabilities, helps users understand available tools, and builds trust through professional presentation.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Key Metrics Cards -->
+        <section id="metrics" class="section">
+            <div class="section-header">
+                <div class="section-icon">📈</div>
+                <div>
+                    <div class="section-title">2. Key Metrics Cards</div>
+                    <div class="section-subtitle">At-a-glance continental health check</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ Average         │ │ Top Performer   │ │ Digital Economy │
+│ Development     │ │                 │ │ Index           │
+│ Index           │ │                 │ │                 │
+│     0.42        │ │   Mauritius     │ │     58.3        │
+│ (Standardized)  │ │     2.15        │ │   (Average)     │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📊 Card-by-Card Guide</h4>
+                    <ul>
+                        <li><strong>Average Development Index:</strong> Mean of all 54 countries (-2 to +3 scale)</li>
+                        <li><strong>Top Performer:</strong> Highest-ranked country and their score</li>
+                        <li><strong>Digital Economy Index:</strong> Average digital adoption (0-100)</li>
+                        <li><strong>Climate Resilience:</strong> Average preparedness for climate shocks</li>
+                        <li><strong>Model Accuracy:</strong> ML prediction reliability (94%)</li>
+                        <li><strong>Countries Monitored:</strong> Complete coverage of 54 nations</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🔍 Interpretation Guide</h4>
+                    <ul>
+                        <li><strong>Development Index:</strong> Negative = below average, Positive = above average</li>
+                        <li><strong>Digital Economy:</strong> Higher = more connected/e-digital</li>
+                        <li><strong>Climate Resilience:</strong> Higher = better prepared for climate shocks</li>
+                        <li><strong>Model Accuracy:</strong> 94% = high confidence in predictions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Country Analysis & Policy Simulation -->
+        <section id="policy" class="section">
+            <div class="section-header">
+                <div class="section-icon">🎮</div>
+                <div>
+                    <div class="section-title">3. Country Analysis & Policy Simulation</div>
+                    <div class="section-subtitle">Interactive policy testing laboratory</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  🔍 Country Analysis & Policy Simulation                         │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ [Nigeria ✓]                                               │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                                                                  │
+│  Infrastructure: [=====○=====] 1.5x  │  Education: [===○=======] 1.2x  │
+│  Trade: [======○====] 1.3x            │
+│                                                                  │
+│  [🔄 Reset] [📥 Export]                                         │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>🎚️ The Three Policy Levers</h4>
+                    <ul>
+                        <li><strong>Infrastructure (0.5x-2.0x):</strong> Roads, power, internet, ports</li>
+                        <li><strong>Education (0.5x-2.0x):</strong> Schools, universities, training</li>
+                        <li><strong>Trade (0.5x-2.0x):</strong> Exports, imports, trade agreements</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>📏 What the Multipliers Mean</h4>
+                    <ul>
+                        <li><strong>1.0x:</strong> Current spending level</li>
+                        <li><strong>1.5x:</strong> 50% increase in investment</li>
+                        <li><strong>0.5x:</strong> 50% cut in spending</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <h5>💡 Real-World Application</h5>
+                <p><em>Example:</em> Select "Kenya", move Infrastructure to 1.8x, Education to 1.3x → Development index jumps from 0.85 to 1.42, showing infrastructure has highest impact in Kenya.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Development Index Bar Chart -->
+        <section id="barchart" class="section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div>
+                    <div class="section-title">4. Development Index by Country</div>
+                    <div class="section-subtitle">Visual country comparison</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  📈 Development Index by Country                                │
+│  Index ▲                                                        │
+│  3.0 ┼        🟢                                                │
+│  2.0 ┼     🟢🟢🟢     🟢🟢                                      │
+│  1.0 ┼  🟢🟢    🟢🟢  🟢  🟢🟢                                    │
+│  0.0 ┼🟢🟢  🟢🟢  🟢🟢 🟢🟢  🟢🟢  🟢🟢                            │
+│ -1.0 ┼   🟢🟢  🟢🟢  🟢🟢  🟢🟢  🟢🟢  🟢🟢                        │
+│ -2.0 ┼                                    🔴🔴  🔴🔴  🔴🔴        │
+│      └───────────────────────────────────┬───────────────────► │
+│         Algeria  Angola  Benin  ...      Zimbabwe              │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>🎨 Color Coding</h4>
+                    <ul>
+                        <li><span class="color-demo" style="background: #28a745;"></span> <strong>Green bars:</strong> Above-average development</li>
+                        <li><span class="color-demo" style="background: #dc3545;"></span> <strong>Red bars:</strong> Below-average development</li>
+                        <li><strong>Bar height:</strong> Magnitude of development level</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🔍 Pattern Recognition</h4>
+                    <ul>
+                        <li><strong>Tall green bars:</strong> Developed economies (South Africa, Mauritius)</li>
+                        <li><strong>Medium bars:</strong> Emerging economies (Ghana, Kenya)</li>
+                        <li><strong>Short red bars:</strong> Least developed (Somalia, Chad)</li>
+                        <li><strong>Clusters:</strong> Regional patterns visible</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Development Drivers Matrix (Bubble Chart) -->
+        <section id="bubble" class="section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div>
+                    <div class="section-title">5. Development Drivers Matrix</div>
+                    <div class="section-subtitle">Multi-dimensional country positioning</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  🔄 Development Drivers Matrix                                  │
+│  Economic ▲                                                    │
+│  Strength │                ○                                    │
+│  400 ┼           ○    ○                                        │
+│      │      ○         ○                                         │
+│  200 ┼  ○        ○                                             │
+│      │○  ○    ○                                                 │
+│    0 ┼○ ○ ○                                                     │
+│      └───────────────────────────────────┬───►                 │
+│         20    40    60    80    100                            │
+│                     Human Capital                              │
+│  ○ = Country | Size = Night Lights | Color = Development       │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📐 Axis Guide</h4>
+                    <ul>
+                        <li><strong>X-axis (Human Capital):</strong> Education + Health</li>
+                        <li><strong>Y-axis (Economic Strength):</strong> GDP + Total Trade</li>
+                        <li><strong>Bubble Size:</strong> Night light intensity (economic activity)</li>
+                        <li><strong>Bubble Color:</strong> Overall development index</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🎯 Quadrant Analysis</h4>
+                    <ul>
+                        <li><strong>Top Right:</strong> Developed, balanced (South Africa)</li>
+                        <li><strong>Top Left:</strong> Resource-rich, poor social (Nigeria)</li>
+                        <li><strong>Bottom Right:</strong> Human potential untapped (Kenya)</li>
+                        <li><strong>Bottom Left:</strong> Needs urgent help (Somalia)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Feature Importance (Explainable AI) -->
+        <section id="importance" class="section">
+            <div class="section-header">
+                <div class="section-icon">🤖</div>
+                <div>
+                    <div class="section-title">6. Feature Importance (Explainable AI)</div>
+                    <div class="section-subtitle">What really drives development?</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  📊 Feature Importance (Explainable AI)                          │
+│  Feature        Importance   0%         25%        50%          │
+│  Infrastructure ████████████ 44.3% ─────────────────►          │
+│  Economic       ██████████   38.4% ───────────────►            │
+│  Human Capital  ████         13.9% ────►                        │
+│  Trade Balance  █             3.4% ─►                           │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📊 The Numbers</h4>
+                    <ul>
+                        <li><strong>Infrastructure:</strong> 44.3% - #1 driver</li>
+                        <li><strong>Economic Strength:</strong> 38.4% - Nearly as important</li>
+                        <li><strong>Human Capital:</strong> 13.9% - Foundational but slower</li>
+                        <li><strong>Trade Balance:</strong> 3.4% - Minimal direct impact</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>💡 Policy Implications</h4>
+                    <ul>
+                        <li><strong>Budget allocation:</strong> Put 44% into infrastructure</li>
+                        <li><strong>Quick wins:</strong> Focus on infrastructure and economic growth</li>
+                        <li><strong>Long-term:</strong> Maintain human capital investments</li>
+                        <li><strong>Don't obsess:</strong> Over trade deficits</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Forecast Chart -->
+        <section id="forecast" class="section">
+            <div class="section-header">
+                <div class="section-icon">🔮</div>
+                <div>
+                    <div class="section-title">7. Development Forecast 2025-2040</div>
+                    <div class="section-subtitle">15-year development trajectories</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  📉 Development Forecast 2025-2040                               │
+│  Index ▲                                                        │
+│  3.0 ┼               South Africa ────┬───┬───┐                │
+│      │            Egypt ────┬───┬───┘   │   │                  │
+│  2.0 ┼      Kenya ──┬───┘   │       │   │   │                  │
+│      │  Ghana ──┘   │       │       │   │   │                  │
+│  1.0 ┼               │       │       │   │   │                  │
+│      │[░░░░░░░░░░░░ Confidence Interval ░░░░░░░░░░░░]          │
+│  0.0 ┼───────────────┴───────┴───┴───────┴───┴──────────────►  │
+│      2025   2027   2029   2031   2033   2035   2037   2040     │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📈 What the Lines Mean</h4>
+                    <ul>
+                        <li><strong>Solid lines:</strong> Expected development path</li>
+                        <li><strong>Dashed lines:</strong> Upper/lower bounds</li>
+                        <li><strong>Gray shading:</strong> 80% confidence interval</li>
+                        <li><strong>Markers:</strong> Data points at key years</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🔍 Pattern Guide</h4>
+                    <ul>
+                        <li><strong>Steep slope:</strong> Rapid development (Rwanda)</li>
+                        <li><strong>Flat line:</strong> Stagnation (Resource-dependent)</li>
+                        <li><strong>Wide band:</strong> High uncertainty (Conflict zones)</li>
+                        <li><strong>Narrow band:</strong> Predictable (Stable economies)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Trade Network Analysis -->
+        <section id="network" class="section">
+            <div class="section-header">
+                <div class="section-icon">🔗</div>
+                <div>
+                    <div class="section-title">8. Trade Network Analysis</div>
+                    <div class="section-subtitle">Regional economic integration visualization</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  🔗 Trade Network Analysis                                       │
+│                                                                  │
+│        ○ Nigeria                        ○ Egypt                  │
+│          ●─────○                         │                       │
+│         /       \                         │                      │
+│        ○         ○───○ Ghana              ○                      │
+│     S.Africa    Kenya  │                  │                      │
+│         \             /                    \                    │
+│          ○───○────○───○                      ○───○              │
+│         DRC   Tanzania                         Morocco           │
+│                                                                  │
+│  Node Size = Trade Volume | 🟢 Positive | 🔴 Negative Balance    │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>🔵 Node Interpretation</h4>
+                    <ul>
+                        <li><strong>Size:</strong> Trade volume (bigger = more trade)</li>
+                        <li><span class="color-demo" style="background: #28a745;"></span> <strong>Green:</strong> Trade surplus (exports > imports)</li>
+                        <li><span class="color-demo" style="background: #dc3545;"></span> <strong>Red:</strong> Trade deficit (imports > exports)</li>
+                        <li><strong>Connections:</strong> Trade relationships</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🌐 Network Patterns</h4>
+                    <ul>
+                        <li><strong>Hubs:</strong> South Africa, Nigeria, Egypt (regional powers)</li>
+                        <li><strong>Clusters:</strong> SADC, ECOWAS regions (integration working)</li>
+                        <li><strong>Isolates:</strong> Few connections (need trade infrastructure)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Policy Impact Analysis -->
+        <section id="policyimpact" class="section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <div>
+                    <div class="section-title">9. Policy Impact Analysis</div>
+                    <div class="section-subtitle">Compare policy effectiveness</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  🎯 Policy Impact Analysis                                       │
+│  Impact ▲                                                        │
+│  0.4 ┼    ████                                                  │
+│  0.3 ┼    ████     ████                                          │
+│  0.2 ┼    ████     ████    ████    ████    ████                 │
+│  0.1 ┼    ████     ████    ████    ████    ████                 │
+│  0.0 ┼────████─────████────████────████────████────►           │
+│         Infra   Educ    Trade   Digital  Green                  │
+│         └─3yrs─┘ └5yrs─┘ └2yrs─┘ └4yrs─┘ └6yrs─┘               │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📊 Policy Comparison</h4>
+                    <ul>
+                        <li><strong>Infrastructure:</strong> 0.35 impact, 3 years</li>
+                        <li><strong>Education:</strong> 0.25 impact, 5 years</li>
+                        <li><strong>Trade:</strong> 0.15 impact, 2 years (quick win)</li>
+                        <li><strong>Digital:</strong> 0.18 impact, 4 years</li>
+                        <li><strong>Green:</strong> 0.12 impact, 6 years</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>💡 Strategic Insights</h4>
+                    <ul>
+                        <li><strong>Quick wins:</strong> Trade policy (2 years)</li>
+                        <li><strong>Transformative:</strong> Infrastructure (3 years, high impact)</li>
+                        <li><strong>Sustainable:</strong> Education + Green (long-term)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Data Table -->
+        <section id="datatable" class="section">
+            <div class="section-header">
+                <div class="section-icon">📋</div>
+                <div>
+                    <div class="section-title">10. Country Development Data Table</div>
+                    <div class="section-subtitle">Complete dataset in sortable format</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  📋 Country Development Data                                    │
+├───────────┬───────┬──────────┬────────────┬─────────┬──────────┤
+│ Country   │ Index │ Human    │ Infra      │ Digital │ Risk     │
+├───────────┼───────┼──────────┼────────────┼─────────┼──────────┤
+│ Mauritius │ 2.15  │ 78.3     │ 82.1       │ 75.4    │ 🟢 Low    │
+│ Seychelles│ 1.98  │ 76.2     │ 79.8       │ 72.1    │ 🟢 Low    │
+│ South Afr │ 1.85  │ 72.5     │ 75.3       │ 68.9    │ 🟡 Medium │
+│ ...       │ ...   │ ...      │ ...        │ ...     │ ...      │
+│ Somalia   │ -1.85 │ 28.4     │ 18.2       │ 15.3    │ 🔴 High   │
+└───────────┴───────┴──────────┴────────────┴─────────┴──────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📋 Column Guide</h4>
+                    <ul>
+                        <li><strong>Index:</strong> Development Index (-2 to +3)</li>
+                        <li><strong>Human Capital:</strong> Education + Health (0-100)</li>
+                        <li><strong>Infrastructure:</strong> Roads, power, internet (0-100)</li>
+                        <li><strong>Digital Economy:</strong> Digital transformation (0-100)</li>
+                        <li><strong>Risk Level:</strong> Early warning indicator</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>⚠️ Risk Level Guide</h4>
+                    <ul>
+                        <li><span class="color-demo" style="background: #28a745;"></span> <strong>🟢 Green:</strong> Low risk, stable</li>
+                        <li><span class="color-demo" style="background: #ffc107;"></span> <strong>🟡 Yellow:</strong> Medium risk, watch</li>
+                        <li><span class="color-demo" style="background: #dc3545;"></span> <strong>🔴 Red:</strong> High risk, intervene</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Control Buttons -->
+        <section id="controls" class="section">
+            <div class="section-header">
+                <div class="section-icon">🎮</div>
+                <div>
+                    <div class="section-title">11. Control Buttons</div>
+                    <div class="section-subtitle">Reset and export functionality</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│                    [🔄 Reset Simulation]                         │
+│                    [📥 Export Data]                              │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>🔄 Reset Simulation</h4>
+                    <ul>
+                        <li><strong>What it does:</strong> Returns all sliders to 1.0x</li>
+                        <li><strong>When to use:</strong> Starting new scenario, made mistake</li>
+                        <li><strong>Result:</strong> Clean slate for new policy tests</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>📥 Export Data</h4>
+                    <ul>
+                        <li><strong>What it does:</strong> Downloads JSON with all data</li>
+                        <li><strong>Includes:</strong> All 54 countries, all indicators</li>
+                        <li><strong>Uses:</strong> Excel analysis, reports, presentations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Footer -->
+        <section id="footer" class="section">
+            <div class="section-header">
+                <div class="section-icon">📌</div>
+                <div>
+                    <div class="section-title">12. Footer</div>
+                    <div class="section-subtitle">Version and update information</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│  Africa Development Intelligence System | Version 2.0            │
+│  with Key Enhancements                                           │
+│  Data updated: March 2026 | Next update: Quarterly              │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>📅 What It Shows</h4>
+                    <ul>
+                        <li><strong>Version 2.0:</strong> Major release with AI, real-time, policy sim</li>
+                        <li><strong>Key Enhancements:</strong> All 7 new features included</li>
+                        <li><strong>March 2026:</strong> Data is current</li>
+                        <li><strong>Quarterly:</strong> Regular update schedule</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>✅ Why It Matters</h4>
+                    <ul>
+                        <li><strong>Trust:</strong> Know data is current</li>
+                        <li><strong>Planning:</strong> Schedule around updates</li>
+                        <li><strong>Credibility:</strong> Cite latest version</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 13: Integrated Workflow -->
+        <section id="workflow" class="section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <div>
+                    <div class="section-title">13. Integrated Workflow</div>
+                    <div class="section-subtitle">How all sections work together</div>
+                </div>
+            </div>
+            
+            <div class="visual-preview">
+                <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│                    INTEGRATED WORKFLOW                           │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  1. OVERVIEW (Header + Metrics)                                  │
+│     → Quick continental health check                             │
+│           ↓                                                      │
+│  2. IDENTIFY (Country Table)                                     │
+│     → Find specific country of interest                          │
+│           ↓                                                      │
+│  3. ANALYZE (Bubble Chart + Bar Chart)                           │
+│     → Understand current situation                               │
+│           ↓                                                      │
+│  4. SIMULATE (Policy Section)                                    │
+│     → Test different investment scenarios                        │
+│           ↓                                                      │
+│  5. VERIFY (Importance Chart)                                    │
+│     → Check if simulation aligns with what drives development   │
+│           ↓                                                      │
+│  6. PROJECT (Forecast Chart)                                     │
+│     → See long-term implications                                 │
+│           ↓                                                      │
+│  7. CONTEXTUALIZE (Network Chart)                                │
+│     → Understand regional trade dynamics                         │
+│           ↓                                                      │
+│  8. DECIDE (Policy Impact Chart)                                 │
+│     → Choose optimal policy mix                                  │
+│           ↓                                                      │
+│  9. EXPORT (Data Table + Export)                                 │
+│     → Save results for reporting                                 │
+└─────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="insight-box">
+                <h5>🎯 Complete User Journey</h5>
+                <p>Just as a pilot uses all instruments together to fly safely, a policymaker uses all dashboard sections together to make informed development decisions. Each section provides a different perspective, and the real power comes from understanding how they interconnect.</p>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>👤 User Journey Map</h4>
+                    <ul>
+                        <li><strong>1. Look at metrics:</strong> "How is Africa doing overall?"</li>
+                        <li><strong>2. Scan country table:</strong> "Which country should I focus on?"</li>
+                        <li><strong>3. Find in bubble chart:</strong> "What's their development profile?"</li>
+                        <li><strong>4. Select country:</strong> "Let's analyze Kenya specifically"</li>
+                        <li><strong>5. Move sliders:</strong> "What if we double infrastructure?"</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🎯 Decision Flow</h4>
+                    <ul>
+                        <li><strong>6. Watch policy chart:</strong> "How much would that help?"</li>
+                        <li><strong>7. Check importance:</strong> "Is infrastructure really the key?"</li>
+                        <li><strong>8. View forecast:</strong> "Where will they be in 2030?"</li>
+                        <li><strong>9. Look at network:</strong> "Who do they trade with?"</li>
+                        <li><strong>10. Export data:</strong> "Save this for my report"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flight Simulator Analogy -->
+        <div class="section" style="background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%); border-left-color: #ffc107;">
+            <div class="section-header">
+                <div class="section-icon">✈️</div>
+                <div>
+                    <div class="section-title">Dashboard as Flight Simulator</div>
+                    <div class="section-subtitle">Understanding through analogy</div>
+                </div>
+            </div>
+            
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h4>🛫 Dashboard vs Flight Simulator</h4>
+                    <ul>
+                        <li><strong>Key Metrics:</strong> Instrument panel (speed, altitude)</li>
+                        <li><strong>Country Selector:</strong> Choosing your aircraft</li>
+                        <li><strong>Policy Sliders:</strong> Control yoke and throttle</li>
+                        <li><strong>Bar Chart:</strong> Current position on map</li>
+                        <li><strong>Bubble Chart:</strong> Weather radar</li>
+                        <li><strong>Importance Chart:</strong> Aircraft manual</li>
+                    </ul>
+                </div>
+                
+                <div class="explanation-card">
+                    <h4>🛬 Complete Analogy</h4>
+                    <ul>
+                        <li><strong>Forecast Chart:</strong> Flight path projection</li>
+                        <li><strong>Network Chart:</strong> Air traffic control view</li>
+                        <li><strong>Policy Impact:</strong> Fuel efficiency calculator</li>
+                        <li><strong>Data Table:</strong> Flight logbook</li>
+                        <li><strong>Export:</strong> Save flight recording</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Reference Cards -->
+        <div style="margin-top: 40px;">
+            <h3 style="margin-bottom: 20px; color: #333;">📌 Quick Reference Cards</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                <span class="metric-badge">🏠 Header: Dashboard identity</span>
+                <span class="metric-badge">📈 Metrics: Continental health</span>
+                <span class="metric-badge">🎮 Policy: Test scenarios</span>
+                <span class="metric-badge">📊 Bar Chart: Country comparison</span>
+                <span class="metric-badge">🔄 Bubble: Development drivers</span>
+                <span class="metric-badge">🤖 Importance: What matters most</span>
+                <span class="metric-badge">🔮 Forecast: Future paths</span>
+                <span class="metric-badge">🔗 Network: Trade relationships</span>
+                <span class="metric-badge">🎯 Policy Impact: Compare options</span>
+                <span class="metric-badge">📋 Data Table: Complete dataset</span>
+                <span class="metric-badge">🔄 Reset: Start over</span>
+                <span class="metric-badge">📥 Export: Save data</span>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <p>Africa Development Intelligence Dashboard | Complete Section Guide v2.0</p>
+            <p style="font-size: 0.9em; margin-top: 15px; color: #999;">Use this guide alongside the main dashboard to understand every component and how they work together for evidence-based policy decisions.</p>
+            <p style="margin-top: 20px;">🚀 <strong>Pro Tip:</strong> Open this guide in one tab and the dashboard in another for side-by-side reference!</p>
+        </div>
+    </div>
+</body>
+</html>
