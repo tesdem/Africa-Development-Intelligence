@@ -83,5 +83,5 @@ The Africa Development Intelligence System is a comprehensive analytics platform
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/africa-development-intelligence.git
+git clone https://github.com/tesdem/africa-development-intelligence.git
 cd africa-development-intelligence
